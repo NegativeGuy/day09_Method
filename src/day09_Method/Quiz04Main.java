@@ -1,10 +1,17 @@
 package day09_Method;
-
+import java.util.Scanner;
 public class Quiz04Main {
 	public static void main(String[] args) {
-		// 수를 입력받아 소수를 판별하는 함수를 만드시오.
-		// 소수 : 1과 자기자신을 제외한 어떤 수로도 나눠지지 않는 수
-		Quiz04Method ex = new Quiz04Method();
-		ex.input();
+		Scanner input = new Scanner(System.in);
+		Quiz04Method prime = new Quiz04Method();
+		int num1;
+		System.out.print("수 입력 : ");
+		num1 = input.nextInt();
+		int result = prime.primeCheck(num1);
+		// 입력받은 수(num1)을 primeCheck로 보냄
+		// == primeCheck 기능이 끝난 후 ==
+		// primeCheck으로부터 return받은 값(cnt)을 result에 대입
+		prime.outPut(num1,result);
+		// 입력받은 수(num1)과 result(cnt값)를 outPut로 보냄
 	}
 }
